@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-function useTitle(celia) {
+function useDocumentTitle(celia) {
   useEffect(() => {
     document.title = celia;
   }, [celia]);
 }
 
-export default useTitle;
+export default useDocumentTitle;
