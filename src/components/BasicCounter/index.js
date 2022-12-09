@@ -1,13 +1,12 @@
-import { useState } from "react";
+
+import useDocumentTitle from "../../hooks/useDocumentTitle";
+import useCounter from "../../hooks/useCounter";
 
 function BasicCounter() {
-  const [count, setCount] = useState(0);
-  function increment() {
-    setCount((count) => count + 1);
-  }
-  function decrement() {
-    setCount((count) => Math.max(0, count - 1));
-  }
+  const [ count, increment, decrement] = useCounter(10000)
+
+  useDocumentTitle(count);
+
   return (
     <div>
       <h4>Basic Counter</h4>
